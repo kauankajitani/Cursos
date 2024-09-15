@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "python back end"
+version = "0.1.0"
+description = ""
+authors = ["kauankajitani <kauankajitani02@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-jwt-extended = "^4.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

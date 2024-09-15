@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+        }
+        .itens{
+            background-color: orangered;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .fs-0{
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+        .fs-1{
+            flex-shrink: 1;
+        }
+        .fs-2{
+            flex-shrink: 2;
+        }
+        .fs-3{
+            flex-shrink: 3;
+        }
+        .fg-1{
+            flex-grow: 1;
+        }
+        .fg-2{
+            flex-grow: 1;
+        }
+        .wrap{
+            flex-wrap: wrap;
+        }
+    /* é a propriedade que estabelece a capacidade de redução ou
+    compreensão do tamanho de um item;
+    obs: quando coloca em 0 ele não deixa eu reduzir,eu falo 
+    basicamente isso não existe capacidade de redução menor
+    que o conteudo ou a base que eu definir;
+    e quando eu coloco em 2 eu falo que eu posso 
+    comprimir em 1 vezes a mais até onde é possivel e assim por
+    diante */
+    </style>
+</head>
+<body>
+    <p>flex-shrink:1</p>
+    <div class="flex-container">
+        <div class="itens fs-1 fg-1">a</div>
+        <div class="itens fs-1 fg-1">b</div>
+        <div class="itens fs-1 fg-1">c</div>
+        <div class="itens fs-1 fg-1">d</div>
+        <div class="itens fs-1 fg-1">e</div>
+    </div>
+    <div class="flex-container">
+        <div class="itens fs-1 fg-1">a</div>
+        <div class="itens fs-1 fg-1">b</div>
+        <div class="itens fs-1 fg-2">tge dasd dasdasdas dasda  dasd as</div>
+        <div class="itens fs-1 fg-1">d</div>
+        <div class="itens fs-1 fg-1">e</div>
+    </div>
+    <p>flex-shrink:0/basis:100</p>
+    <div class="flex-container">
+        <div class="itens fs-0 fg-1">a</div>
+        <div class="itens fs-0 fg-1">b</div>
+        <div class="itens fs-0 fg-1">c</div>
+        <div class="itens fs-0 fg-1">d</div>
+        <div class="itens fs-0 fg-1">e</div>
+    </div>
+    <p>flex-shrink:mix/basis:100</p>
+    <div class="flex-container">
+        <div class="itens fs-1 fg-1">a</div>
+        <div class="itens fs-0 fg-1">bdasdsadsadadasdasd</div>
+        <div class="itens fs-2 fg-1">c</div>
+        <div class="itens fs-3 fg-1">d</div>
+    </div>
+    <p>flex-shrink:mix/basis:100/wrap obs: não funciona com wrap</p>
+    <div class="flex-container wrap">
+        <div class="itens fs-0 fg-1">aaaaaaaaaaaaaaaaaaaaa</div>
+        <div class="itens fs-0 fg-1">b</div>
+        <div class="itens fs-1 fg-1">cdasdasdasdd dasdas</div>
+        <div class="itens fs-1 fg-1">ddasdasdasdsasdas</div>
+    </div>
+</body>
+</html>

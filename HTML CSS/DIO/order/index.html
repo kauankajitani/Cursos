@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+        .item{
+            flex:1;
+            background-color: brown;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+        }
+        .columns{
+            flex-direction: column;
+        }
+        .or-1{
+            order: -1;
+        }
+        .or0{
+            order: 0;
+        }
+        .or1{
+            order:1
+        }
+        .or2{
+            order: 2;
+        }
+        .or3{
+            order: 3;
+        }
+        .or4{
+            order: 4;
+        }
+    </style>
+</head>
+
+<body>
+    <p>order:0</p>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <p>order: mix</p>
+    <div class="flex-container">
+        <div class="item or4">1</div>
+        <div class="item or2">2</div>
+        <div class="item or3">3</div>
+        <div class="item or1">4</div>
+    </div>
+    <p>order: mix columns</p>
+    <div class="flex-container columns">
+        <div class="item or4">1</div>
+        <div class="item or2">2</div>
+        <div class="item or3">3</div>
+        <div class="item or1">4</div>
+    </div>
+    <p>order: mix columns com valores negativos</p>
+    <div class="flex-container columns">
+        <div class="item or4">1</div>
+        <div class="item or2">2</div>
+        <div class="item or3">3</div>
+        <div class="item or1">4</div>
+        <div class="item or-1">5</div>
+        <div class="item or-0">6</div>
+    </div>
+</body>
+</html>

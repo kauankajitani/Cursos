@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - alight items</title>
+    <style>
+        h1{
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 350px;
+            height: 400px;
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            background-color: red;
+            padding: 0 5px;
+            margin: 5px;
+            flex: 1;
+            text-align: center;
+            color: white;
+        }
+        .stretch {
+            align-content: stretch;
+        }
+        .center{
+            align-content: center;
+        }
+        .flex-start{
+            align-content: flex-start;
+        }
+        .flex-end{
+            align-content: flex-end;
+        }
+        .space-around{
+            align-content: space-around;
+        }
+        .space-between{
+            align-content: space-between;
+        }
+        /* é a propriedade responsavel por tratar o alinhamneto 
+        das linhas do container em relação ao eixo vertical do 
+        container;
+        precisamos que: 
+        1.o container utilize quebras de linhas;
+        2.A altura do container seja maior que a soma das linhas do itens;*/
+    </style>
+</head>
+<body>
+    <img  alt:"anotação" width="100%" height="100%" src="diferenças.jpg" />
+    <h1>stretch</h1>
+    <div class="container stretch">
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+    </div>
+    <h1>center</h1>
+    <div class="container center">
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+    </div>
+    <h1>flex-start</h1>
+    <div class="container flex-start">
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+    </div>
+    <h1>flex-end</h1>
+    <div class="container flex-end">
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+    </div>
+    <h1>flex-end</h1>
+    <div class="container flex-end">
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+    </div>
+    <h1>space-around</h1>
+    <div class="container space-around">
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+    </div>
+    <h1>space-between</h1>
+    <div class="container space-between">
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+        <div class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sapien</div>
+    </div>
+    
+</body>
+
+</html>

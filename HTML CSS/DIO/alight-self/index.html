@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            max-width: 350px;
+            border: 1px solid black;
+            text-align: center;
+            margin-bottom: 10px;
+            display: flex;
+        }
+        .item{
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+        .alight-container{
+            align-self: center;
+        }
+        .center{
+            align-self: center;
+        }
+        .start{
+            align-self: flex-start;
+        }
+        .end{
+            align-self: flex-end;
+        }
+        .baseline{
+            align-self: baseline;
+        }
+        .stretch{
+            align-self: stretch;
+        }
+        .auto{
+            align-self: auto;
+        }
+        .columns{
+            flex-direction: column;
+        }
+    /* é a propriedade que estabelece o alinhamento de
+    modo individual sobre um determinado item.*/
+    </style>
+</head>
+<body>
+    <img src="valores.jpg" alt="anotação" width="100%" height="100%">
+    <p>mix</p>
+    <section class="flex-container">
+        <div class="item center">asd</div>
+        <div class="item start">a</div>
+        <div class="item stretch">sdsdd dasddasdas dasdas dasda asdasd adsadadadss</div>
+        <div class="item end">ddssss</div>
+    </section>
+    <section class="flex-container columns">
+        <div class="item center">asd</div>
+        <div class="item start">a</div>
+        <div class="item stretch">sdsdd dasddasdas dasdas dasda asdasd adsadadadss</div>
+        <div class="item end">ddssss</div>
+    </section>
+</body>
+</html>

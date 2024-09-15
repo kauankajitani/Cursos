@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            width: 400px;
+        }
+        .item{
+            background-color: red;
+            color: azure;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+        .flex-1{
+            flex: 1;
+            /* grow = 1,shrink=1,basis=0 */
+        }
+        .flex-2{
+            flex:2;
+            /* grow = 2,shrink=1,basis=0 */
+        }
+        .largura{
+            width: 100px;
+            /*min-width: 150px;*/
+        }
+    /*esta propriedade é um atalho ou abreviação de escrita 
+    para as propriedades:grow,shrink,basis.
+    exatamente nessa ordem*/
+    </style>
+</head>
+<body>
+    <p>flex:1</p>
+    <div class="flex-container">
+        <div class="item flex-1">a</div>
+        <div class="item flex-1">bbbbbbbbbbbbbbbbbbbbb</div>
+        <div class="item flex-1">cc</div>
+        <div class="item flex-1">d</div>
+        <div class="item flex-1">ef</div>
+    </div>
+    <p>flex:mix</p>
+    <div class="flex-container">
+        <div class="item flex-1">a</div>
+        <div class="item flex-2">bbbbbbbbbbbbbbbbbbbbb</div>
+        <div class="item flex-1">cc</div>
+        <div class="item flex-2">d</div>
+        <div class="item flex-1">ef</div>
+    </div>
+    <p>widht ignorado -> basis: 0</p>
+    <div class="flex-container">
+        <div class="item flex-1 largura">a</div>
+        <div class="item flex-1 largura">bbbbbbb</div>
+        <div class="item flex-1 largura">cc</div>
+        <div class="item flex-1 largura">d</div>
+        <div class="item flex-1 largura">ef</div>
+    </div>
+    
+</body>
+</html>

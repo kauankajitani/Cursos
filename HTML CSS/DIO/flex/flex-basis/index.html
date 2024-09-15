@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            max-width: 300px;
+            border: 1px solid black;
+            display: flex;
+        }
+        .itens{
+            background-color: coral;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+        .bauto{
+            flex-basis: auto;
+        }
+        .fg-1{
+            flex-grow: 1;
+        }
+        .fg-2{
+            flex-grow: 2;
+        }
+        .fg-3{
+            flex-grow: 3;
+        }
+        .fg-4{
+            flex-grow: 4;
+        }
+        .b-0{
+            flex-basis: 0;
+        }
+        .b-1{
+            flex-basis: 1;
+        }
+        .w100{
+            flex-basis: 100px;
+        }
+        .justify-content-center{
+            justify-content:center;
+        }
+        .justify-content-space-betwen{
+            justify-content:space-between;
+        }
+        .justify-content-space-arround{
+            justify-content: space-around;
+        }
+        .wrap{
+            flex-wrap: wrap;
+        }
+        .columns{
+            flex-direction: column;
+        }
+        .alight-center{
+            align-items: center;
+        }
+    /*é a propriedade que estabelece o tamanho inicial dos item
+    antes das distruibuição de espaço restante dentro dele,usando
+    como base o conteudo interno disposto;
+    é lidar com proporcianalidade e espaçamento depois 
+    obs: basis em 0 não permite quebra de linha e tambem
+    ignora meu widht */
+    </style>
+</head>
+<body>
+    
+    <img src="valores.jpg"  alt="valores possiveis" width="100%" height="100100%"/>
+    <h1>auto obs:aqui pode haver fator de crescimento graças ao auto</h1>
+    <p>auto</p>
+    <div class="flex-container">
+        <div class="itens bauto fg-1">a</div>
+        <div class="itens bauto fg-4">bbb</div>
+        <div class="itens bauto fg-1">c</div>
+        <div class="itens bauto fg-1">def</div>
+    </div>
+    <p>0 (zero)</p>
+    <div class="flex-container">
+        <div class="itens b-0 fg-1">aaaaaaaaaa</div>
+        <div class="itens b-0 fg-1">aaaaaaaaa</div>
+        <div class="itens b-0 fg-1">aaaaaaaa</div>
+        <div class="itens b-0 fg-1">aaaaaaa</div>
+    </div>
+    <p>basis + widht obs: não ter fator de crescimento pois ja defini os tamanhos que cada um deve ter</p>
+    <div class="flex-container">
+        <div class="itens w100 ">a</div>
+        <div class="itens w100 ">a</div>
+        <div class="itens w100 ">a</div>
+        <div class="itens w100 ">a</div>
+    </div>
+    <p>0 (zero) justify-content center</p>
+    <div class="flex-container justify-content-center">
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaa</div>
+    </div>
+    <p>0 (zero) justify-content center wrap</p>
+    <div class="flex-container justify-content-center wrap">
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+    </div>
+    <p>0 (zero) justify-content space-between wrap</p>
+    <div class="flex-container justify-content-space-betwen wrap">
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div> 
+    </div>
+    <h1>></a></h1>
+    <div class="flex-container justify-content-space-betwen wrap">
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div> 
+    </div>
+    <p>0 (zero) justify-content space-arround wrap</p>
+    <div class="flex-container justify-content-space-arround wrap">
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+    </div> 
+    <p>0 (zero) alight-center wrap</p>
+    obs:não funciona
+    <div class="flex-container alight-center wrap">
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+        <div class="itens b-0 ">aaaaaaaaaa</div>
+    </div>
+</body>
+</html>
